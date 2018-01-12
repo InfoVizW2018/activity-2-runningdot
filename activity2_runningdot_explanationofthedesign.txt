@@ -1,0 +1,17 @@
+Our visualization design is for crew members in Seaspan to schedule vessels and berth usage. The design contains two parts(Schedule time table and Real-Time display): 
+
+Page1. Schedule Time table. 
+The final visualization design is like a Gantt chart. The x-axis is time in a week span, starting from Monday 00:00AM and ending in Sunday midnight. On the y-axis, all 6 vessels are listed in order. All sailings of the vessels are listed as bars regarding to Departure and Destination place and time. 
+Our original design is like a class table. By closely investigating data, we note that most of the ferries are sailing during the midnight, so we changed to the current design.
+
+Page2. Real-Time Display (vessel status)
+Real-Time display is a map view. On the map, the status of each vessel is marked on the map with a vessel icon. The berth is also marked on the map. The vessel information is listed in a table under the map, including current status, departure, destination, DepartTime, ArrivalTime, load(in %) and berth. It is designed as a tab-strip under the map view. 
+
+Page3. Real-Time Display (berth status)
+This page shows another tab strip under the map view, which shows information about the berth status(vacant or occupied : ship name). 
+
+What: Original dataset type is a static flat table. There are 2 data types in the table, items, and attributes. The attribute type is quantitative and cyclic. The key is vessel name. 
+Why: The reason for using a table to demonstrate content is because the schedule can be easily traced based on different vessels, departures, and date.
+     The reason for using a map view to show the vessel status is because it is very intuitive and easy to use. Crew members can get an intuitive idea on the status of a vessel(where is it, how full is it, and its next destination). If he needs more detailed information, he can use this list as a supplement to the map view.  
+How: Based on the given data set, we propose to visualize it in two parts: the time table and real-time display. The time table demonstrates schedules and the real-time display demonstrates vessel status. Detailed design is described above. Color is not used in this version and we will improve our design in the next version. 
+
